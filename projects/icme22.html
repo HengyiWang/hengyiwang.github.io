@@ -1,39 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
-    <title>Boosting Video Object segmentation based on scale inconsistency</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="BeerSlider.css">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
-    <link rel="stylesheet" href="css/demo.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boosting Video Object Segmentation Based on Scale Inconsistency</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        background: rgb(255, 255, 255) no-repeat fixed top left;
+        font-family:'Open Sans', sans-serif;
+      }
+    </style>
 
-</head>
+  </head>
 
-<body>
+  <!-- cover -->
+  <section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <h2 style="font-size:30px;">Boosting Video Object Segmentation Based on Scale Inconsistency</h2>
+            <h4 style="color:#6e6e6e;"> IEEE INTERNATIONAL CONFERENCE ON MULTIMEDIA AND EXPO (ICME) 2022 </h4>
+            <hr>
+            <h6> <a href="https://scholar.google.com/citations?user=2d9j2_wAAAAJ&hl=zh-CN" target="_blank">Hengyi Wang</a>, 
+                 <a href="http://eecs.qmul.ac.uk/~coh/" target="_blank">Changjae Oh</a>
+                 <br>
+                 <br>
+            <p> Queen Mary University of London &nbsp;
+                <br>
+            </p>
+            <div class="row justify-content-center">
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/abs/2205.01197" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Paper </a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon" href="https://github.com/HengyiWang/SIRNet" role="button" target="_blank" disabled=1>
+                <i class="fa fa-github-alt"></i> Code </a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon" href="https://davischallenge.org/" role="button" 
+                    target="_blank" disabled=1>
+                <i class="fa fa-github-alt"></i> Dataset </a> </p>
+              </div>
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="files/neuconw-supp.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Supplementary</a> </p>
+              </div> -->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="container">
-    <header>
-        </br>
-        <h1><b><center>Boosting Video Object Segmentation Based on Scale Inconsistency</center></b></h1>
-        </br>
-        <h2>
-            <center>Hengyi Wang and <a href="http://eecs.qmul.ac.uk/~coh/">Changjae Oh</a></center>
-        </h2>
-        <h2>
-            <center>School of Electronic Engineering and Computer Science, Queen Mary University of London, UK</center>
-        </h2>
-        <h2>
-            <center><a href="http://2022.ieeeicme.org/">IEEE INTERNATIONAL CONFERENCE ON MULTIMEDIA AND EXPO (ICME) 2022</a></center>
-        </h2>
-    </header>
-
-    <div id="abstract">
-        <h2><b>Abstract</b></h2>
-        <h4 style="font: inherit;">
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2>Abstract</h2>
+             <hr style="margin-top:0px">
+          <p class="text-justify">
             We present a refinement framework to boost the performance of 
             pre-trained semi-supervised video object segmentation (VOS) models. 
             Our work is based on scale inconsistency, which is motivated by the 
@@ -47,80 +80,320 @@
             optimization, that bootstraps the predictions without ground-truth masks 
             based on the scale inconsistency. Experiments on DAVIS 16 and DAVIS 17 
             datasets show that our framework can be generically applied to various 
-            VOS models and improve their performance. </h4>
+            VOS models and improve their performance.
+              
+          </p>
+        </div>
+      </div>
     </div>
-
-    <div id="Method">
-        <h2><b>Method</b></h2>
-        <center><img id="pip" src="icme22/Overview.png" height="180" width="700" ></center>
-        <h2 style="font: inherit;text-align: center;"><b> Overview of the proposed framework </b></h2>
-        <h4 style="font: inherit;">
+  </section>
+    <br>
+    
+  <!-- Method -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2>Method</h2>
+             <hr style="margin-top:0px">
+          <p class="text-justify">
             We aim to improve pre-trained VOS models (backbone model) using the multi-scale 
             context aggregation module with the scale inconsistency estimation (a). At test-time, 
             we further perform the self-supervised online adaptation that updates the model parameters 
             to reduce the accumulation of the errors over the frames, caused by the increase of the 
             scale inconsistency (b).
-             </h4>
+              
+          </p>
+        </div>
+      </div>
+      <div class="row" style="margin-top:5px">
+        <div class="col-12 text-center">
+          <img class="img-fluid" src="icme22/Overview.png" alt="">
+        </div>
+      </div>
     </div>
+  </section>
+    <br>
+    
 
-    <div id="result">
-        <h2><b>Visual comparison</b></h2>
-        <!-- <h2 style="font: inherit;"> -->
-        
-        <br>
-        
-        <video width="320" height="240" loop autoplay muted>
-            <source src="icme22/videos/goldfish_osvos.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
-
-        <video width="320" height="240" loop autoplay muted>
-            <source src="icme22/videos/goldfish.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
-
-        <br>
-
-        
-        <video width="320" height="240" loop autoplay muted>
-            <source src="icme22/videos/camel_rgmp.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
-
-        <video width="320" height="240" loop autoplay muted>
-            <source src="icme22/videos/camel_ours.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
-
-        <br>
-        
-        
-        <video width="320" height="240" loop autoplay muted>
-            <source src="icme22/videos/soapbox_stm.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
-
-        <video width="320" height="240" loop autoplay muted>
-            <source src="icme22/videos/soapbox_ours.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
-        
-
-        
+  <!-- Visual Comparison -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h2>Visual results</h2>
+            <hr style="margin-top:0px">
+            <video width="90%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                <source src="icme22/videos/Gold-fish-osvos.webm" type="video/webm">
+            </video>
+            <br>
+            <video width="90%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                <source src="icme22/videos/moto-osvos.webm" type="video/webm">
+            </video>
+            <br>
+            <br>
+            <br>
+            <video width="90%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                <source src="icme22/videos/dog-RGMP.webm" type="video/webm">
+            </video>
+            <br>
+            <video width="90%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                <source src="icme22/videos/camel-RGMP.webm" type="video/webm">
+            </video>
+            <br>
+            <br>
+            <br>
+            <video width="90%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                <source src="icme22/videos/soapbox-stm.webm" type="video/webm">
+            </video>
+            <br>
+            <video width="90%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                <source src="icme22/videos/ski-stm.webm" type="video/webm">
+            </video>
+            
+        </div>
+      </div>
     </div>
+  </section>
+  <br>
 
-    <div id="material">
-        <h4><b>Sources</b></h4>
-        <a href="https://arxiv.org/abs/2205.01197">
-            <button>Paper</button>
-        </a>
-        <a href="https://github.com/HengyiWang/SIRNet">
-            <button>Code</button>
-        </a>
 
+  <!-- <section>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+            <h3>AR demo 1</h3>
+            <hr style="margin-top:0px">
+            <video width="100%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+                <source src="videos/ar-1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col text-center">
+            <h3>AR demo 2</h3>
+            <hr style="margin-top:0px">
+            <video width="100%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+                <source src="videos/ar-2.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
     </div>
- 
+  </section>
+  <br> -->
 
+  <!-- <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Generalization to the outdoor scene</h3>
+            <p class="text-justify"> 
+              The pretrained model of NeuralRecon can generalize reasonably well to outdoor scenes, which are completely out of the domain of the training dataset ScanNet.
+            </p>
+            <hr style="margin-top:0px">
+            <video width="100%" playsinline="" controls preload="" muted="">
+                <source src="videos/outdoor-midres-8.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Handling scenes with extremely low texture</h3>
+            <p class="text-justify"> 
+              NeuralRecon can handle homogeneous textures (e.g. white walls and tables), thanks to the learned surface priors.
+            </p>
+            <hr style="margin-top:0px">
+            <video width="100%" playsinline="" controls  loop="loop" preload="" muted="">
+                <source src="videos/textureless-midres-8.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br> -->
+
+
+
+
+  <!-- overview video -->
+  <!-- <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>PLACEHODER: Overview video (5 min)</h3>
+            <hr style="margin-top:0px">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe style="clip-path: inset(1px 1px)" width="100%" height="100%" src="https://www.youtube.com/embed/wuMPaUTJuO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br> -->
+
+
+  <!-- Pipeline overview -->
+  <!-- <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Pipeline overview</h3>
+            <hr style="margin-top:0px">
+            <img class="img-fluid" src="images/neucon-arch.png" alt="NeuralRecon Architechture">
+            <hr style="margin-top:0px">
+            <p class="text-justify">
+              NeuralRecon predicts TSDF with a three-level coarse-to-fine approach that gradually increases the density of sparse voxels.
+              Key-frame images in the local fragment are first passed through the image backbone to extract the multi-level features. 
+              These image features are later back-projected along each ray and aggregated into a 3D feature volume $\mathbf{F}_t^l$, where $l$ represents the level index. 
+              At the first level ($l=1$), a dense TSDF volume $\mathbf{S}_t^{1}$ is predicted.
+              At the second and third levels, the upsampled $\mathbf{S}_t^{l-1}$ from the last level is concatenated with $\mathbf{F}_t^l$ 
+              and used as the input for the GRU Fusion and MLP modules.
+              A feature volume defined in the world frame is maintained at each level as the global hidden state of the GRU.
+              At the last level, the output $\mathbf{S}_t^l$ is used to replace corresponding voxels in the global TSDF volume $\mathbf{S}_t^{g}$, 
+              yielding the final reconstruction at time $t$. 
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br> -->
+
+  <!-- Comparison with state-of-the-art methods -->
+  <!-- <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Comparison with baseline methods</h3>
+            <p class="text-left"> 
+             Only the inference time on key frames is computed. Back-face culling is enabled during rendering. Ground-truth is captured using the LiDAR sensor on iPad Pro.</p>
+            <hr style="margin-top:0px">
+            <p class="text-left" style="color:#646464"> B5-Scene 1:</p>
+            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" controls>
+                <source src="videos/compare_merged.m4v" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Training speed comparison</h3>
+            <p class="text-justify"> 
+              Data is captured around the working area with an iPhone, and the camera poses are obtained from <a href="https://developer.apple.com/documentation/arkit">ARKit</a>.
+              The model used here is only trained on ScanNet, which indicates that NeuralRecon generalizes well to new domains.
+              The gradual refinement on the reconstruction quality over time (through GRU-Fusion) can also be observed.
+            </p>
+            <hr style="margin-top:0px">
+            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                <source src="videos/training_fast.m4v" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>The Heritage-Recon Benchmark</h3>
+            <hr style="margin-top:0px">
+            <p class="text-justify"> 
+              To the best of our knowledge, there is no existing dataset pairing Internet photo collections with ground truth 3D geometry. 
+              Therefore, we introduce <i>Heritage-Recon</i>, a new benchmark dataset with LiDAR scans as ground truth, derived from <a href="https://openheritage3d.org/">Open Heritage 3D</a>.
+              The following GIFs demostrate the alignment quality of the LiDAR scans and the images.
+              Grid row
+              <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <img src="images/gt_alignment/pe_1.gif" class="img-fluid mb-4" alt="" data-wow-delay="0.3s">
+                  <img src="images/gt_alignment/pe_2.gif" class="img-fluid mb-4" alt="" data-wow-delay="0.3s">
+                </div>
+
+                <div class="col-lg-4 col-md-12 mb-4">
+                  <img src="images/gt_alignment/bg_1.gif" class="img-fluid mb-4" alt="" data-wow-delay="0.3s">
+                  <img src="images/gt_alignment/bg_2.gif" class="img-fluid mb-4" alt="" data-wow-delay="0.3s">
+                  <img src="images/gt_alignment/bg_3.gif" class="img-fluid mb-2" alt="" data-wow-delay="0.3s">
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <img src="images/gt_alignment/lm_1.gif" class="img-fluid mb-4" alt="" data-wow-delay="0.3s">
+                  <img src="images/gt_alignment/pba_1.gif" class="img-fluid mb-4" alt="" data-wow-delay="0.3s">
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br> -->
+
+
+  <!-- citing -->
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Citation</h3>
+          <hr style="margin-top:0px">
+              <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@article{wang2022boosting,
+    title={Boosting Video Object Segmentation based on Scale Inconsistency},
+    author={Wang, Hengyi and Oh, Changjae},
+    journal={IEEE International Conference on Multimedia and Expo (ICME)},
+    year={2022}
+  }
+  </code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ack -->
+  <!-- <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Acknowledgements</h3>
+          <hr style="margin-top:0px">
+          <p class="text-justify">
+            We would like to specially thank Reviewer 3 for the insightful and constructive comments.
+            We would like to thank Sida Peng , Siyu Zhang and Qi Fang for the proof-reading.
+          </p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- rec -->
+  <!-- <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Recommendations to other works from our group</h3>
+          <hr style="margin-top:0px">
+          <p class="text-justify">
+            Welcome to checkout our work on Transformer-based feature matching (<a href="http://zju3dv.github.io/loftr">LoFTR</a>) and human reconstruction (<a href="http://zju3dv.github.io/neuralbody">NeuralBody</a> and <a href="http://zju3dv.github.io/Mirrored-Human">Mirrored-Human</a>) in CVPR 2021.
+          </p>
+      </div>
+    </div>
+  </div> -->
+
+
+
+  <footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+      <hr>
+      Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+  </footer>
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </body>
-
 </html>
