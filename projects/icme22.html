@@ -24,7 +24,7 @@
             <center>Hengyi Wang and <a href="http://eecs.qmul.ac.uk/~coh/">Changjae Oh</a></center>
         </h2>
         <h2>
-            <center>School of Electrical Engineering and Computer Science, Queen Mary University of London, UK</center>
+            <center>School of Electronic Engineering and Computer Science, Queen Mary University of London, UK</center>
         </h2>
         <h2>
             <center><a href="http://2022.ieeeicme.org/">IEEE INTERNATIONAL CONFERENCE ON MULTIMEDIA AND EXPO (ICME) 2022</a></center>
@@ -48,6 +48,76 @@
             based on the scale inconsistency. Experiments on DAVIS 16 and DAVIS 17 
             datasets show that our framework can be generically applied to various 
             VOS models and improve their performance. </h4>
+    </div>
+
+    <div id="Method">
+        <h2><b>Method</b></h2>
+        <center><img id="pip" src="icme22/Overview.png" height="180" width="700" ></center>
+        <h2 style="font: inherit;text-align: center;"><b> Overview of the proposed framework </b></h2>
+        <h4 style="font: inherit;">
+            We aim to improve pre-trained VOS models (backbone model) using the multi-scale 
+            context aggregation module with the scale inconsistency estimation (a). At test-time, 
+            we further perform the self-supervised online adaptation that updates the model parameters 
+            to reduce the accumulation of the errors over the frames, caused by the increase of the 
+            scale inconsistency (b).
+             </h4>
+    </div>
+
+    <div id="result">
+        <h2><b>Visual comparison</b></h2>
+        <!-- <h2 style="font: inherit;"> -->
+        
+        <br>
+        
+        <video width="320" height="240" loop autoplay muted>
+            <source src="icme22/videos/goldfish_osvos.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+
+        <video width="320" height="240" loop autoplay muted>
+            <source src="icme22/videos/goldfish.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+
+        <br>
+
+        
+        <video width="320" height="240" loop autoplay muted>
+            <source src="icme22/videos/camel_rgmp.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+
+        <video width="320" height="240" loop autoplay muted>
+            <source src="icme22/videos/camel_ours.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+
+        <br>
+        
+        
+        <video width="320" height="240" loop autoplay muted>
+            <source src="icme22/videos/soapbox_stm.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+
+        <video width="320" height="240" loop autoplay muted>
+            <source src="icme22/videos/soapbox_ours.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        
+
+        
+    </div>
+
+    <div id="material">
+        <h4><b>Sources</b></h4>
+        <a href="https://arxiv.org/abs/2205.01197">
+            <button>Paper</button>
+        </a>
+        <a href="https://github.com/HengyiWang/SIRNet">
+            <button>Code</button>
+        </a>
+
     </div>
  
 
